@@ -1,7 +1,8 @@
 import "./app.css";
+import Video from "./component/video";
 
 function App() {
-  return <div className="App">Hello world:)</div>;
+  return <Video></Video>;
 }
 
 export default App;
