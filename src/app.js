@@ -1,8 +1,8 @@
 import "./app.css";
-import Video from "./component/video";
+import MostPopularList from "./component/mostPopularList";
 
 function App() {
-  return <Video></Video>;
+  return <MostPopularList></MostPopularList>;
 }
 
 export default App;
