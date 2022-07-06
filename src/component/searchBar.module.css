@@ -1,0 +1,17 @@
+.searchForm {
+  width: 50%;
+}
+.searchInput {
+  width: 85%;
+  line-height: 35px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+.searchButton {
+  width: 15%;
+  line-height: 35px;
+  background-color: #d1d1d17c;
+  border: 1px solid #ccc;
+  color: #888;
+}

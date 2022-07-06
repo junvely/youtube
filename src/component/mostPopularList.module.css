@@ -1,25 +1,25 @@
-.items {
+ul.items {
+  padding: 2em 3em;
   display: flex;
-  padding: 3%;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
-.item {
-  width: 30%;
+li.item {
+  width: 19.2%;
   height: auto;
   padding-bottom: 1em;
-  margin-bottom: 1em;
-  background-color: rgba(255, 255, 255, 0.651);
+  margin-bottom: 3em;
+  background-color: #d1d1d14b;
   border-radius: 5px;
 }
-.title {
+a.title {
   line-height: 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  padding: 5%;
+  padding: 3% 5%;
   display: block;
 }
-.channel {
+span.channel {
   font-size: 0.9rem;
   padding: 5%;
   color: #444;
