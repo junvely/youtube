@@ -12,14 +12,14 @@ li.item {
   background-color: #d1d1d14b;
   border-radius: 5px;
 }
-a.title {
+.title {
   line-height: 1.5rem;
   font-size: 1rem;
   font-weight: 600;
   padding: 3% 5%;
   display: block;
 }
-span.channel {
+.channel {
   font-size: 0.9rem;
   padding: 5%;
   color: #444;
