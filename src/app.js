@@ -65,19 +65,36 @@ class App extends Component {
       // },
     ],
   };
-  getData = () => {
-    return fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyD3Y3NpgBRs7TjOFCbYWGOStHeM31U7dvA%20"
-    )
-      .then((Response) => Response.json())
-      .then((json) => {
-        this.setState({ videos: json.items });
-      });
-  };
 
   componentDidMount = () => {
     console.log("mount!");
-    this.getData();
+    this.getMostPopularData();
+  };
+
+  getSearchData = (input) => {
+    return fetch(
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${input}&key=AIzaSyD3Y3NpgBRs7TjOFCbYWGOStHeM31U7dvA%20`
+    )
+      .then((Response) => Response.json())
+      .then((json) => {
+        const videos = json.items.map((item) => {
+          return { ...item };
+        });
+        this.setState({ videos });
+      });
+  };
+
+  getMostPopularData = () => {
+    return fetch(
+      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=AIzaSyD3Y3NpgBRs7TjOFCbYWGOStHeM31U7dvA%20"
+    )
+      .then((Response) => Response.json())
+      .then((json) => {
+        const videos = json.items.map((item) => {
+          return { ...item };
+        });
+        this.setState({ videos });
+      });
   };
 
   render() {
@@ -88,7 +105,7 @@ class App extends Component {
             <h1 className="logo">
               <img src={logo} alt="logo" />
             </h1>
-            <SearchBar></SearchBar>
+            <SearchBar getSearchData={this.getSearchData}></SearchBar>
             <div className="right-menu">
               <ul>
                 <li>
