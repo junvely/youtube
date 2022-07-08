@@ -7,18 +7,18 @@ class VideoList extends Component {
   state = {
     video: "",
   };
+
   handleVideoReturn = (video) => {
-    const videoData = { video };
-    console.log(videoData);
+    const videoData = { ...video };
     this.setState({ video: videoData });
   };
 
   render() {
     const { videos } = this.props;
-    console.log(this.state.video);
+    const { video } = this.state;
     return (
       <>
-        <VideoDetails video={this.state.video}></VideoDetails>
+        {video ? <VideoDetails video={this.state.video}></VideoDetails> : null}
         <ul className={styles.items}>
           {videos.map((item) => (
             <Video

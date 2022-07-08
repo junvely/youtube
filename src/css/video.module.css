@@ -1,5 +1,4 @@
 ul.items {
-  padding: 2em 3em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -14,6 +13,12 @@ li.item {
 }
 .titleCon {
   padding: 3% 5%;
+  display: flex;
+}
+.titleCon img {
+  width: 30px;
+  height: 30px;
+  margin: 5px 15px 5px 0px;
 }
 .title {
   height: 3rem;
@@ -23,7 +28,7 @@ li.item {
   margin-bottom: 3%;
   overflow: hidden;
 }
-.channel {
+.channelName {
   font-size: 0.9rem;
   color: #555;
 }
