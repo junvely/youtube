@@ -29,41 +29,6 @@ button {
   cursor: pointer;
 }
 
-header {
-  background-color: #fff;
-  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
-  border-bottom: 1px solid #ccc;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
-  width: 100%;
-  padding: 1em 3em;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-h1.logo {
-  width: 150px;
-}
-
-.right-menu ul {
-  width: 20%;
-  min-width: 150px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.right-menu ul > li {
-  font-size: 1.3rem;
-  line-height: 35px;
-  color: #222;
-  cursor: pointer;
-}
-
 section {
   width: 100%;
   margin: 0 auto;
