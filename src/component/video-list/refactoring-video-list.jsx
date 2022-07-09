@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Video from "../video/refactoring-video";
 import VideoDetails from "../video-details/refactoring-video-details";
 import styles from "../video/video.module.css";
@@ -14,7 +14,7 @@ const VideoList = (props) => {
   return (
     <>
       {video ? <VideoDetails video={video}></VideoDetails> : null}
-      <ul className={styles.items}>
+      <ul className={styles.videos}>
         {props.videos.map((video) => (
           <Video
             key={video.id}

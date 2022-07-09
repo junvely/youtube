@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styles from "./videoDetails.module.css";
-import channelImg from "../../img/youtube.png";
 
 class VideoDetails extends Component {
   render() {
@@ -28,7 +27,7 @@ class VideoDetails extends Component {
           <h2 className={styles.title}>{video.snippet.title}</h2>
           <p className={styles.description}>{video.snippet.description}</p>
           <div className={styles.channel}>
-            <img src={channelImg} alt="channel" />
+            <img src="../logo.png" alt="channel" />
             <span>{video.snippet.channelTitle}</span>
           </div>
         </div>

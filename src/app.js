@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./app.css";
-import logo from "./img/logo.png";
 // import SearchBar from "./component/searchBar";
 import VideoList from "./component/video-list/refactoring-video-list";
 
@@ -201,25 +200,12 @@ const App = () => {
       .catch((error) => console.log("error", error));
   }, []);
 
-  // const getMostPopularData = () => {
-  //   return fetch(
-  //     "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=10&key=AIzaSyD3Y3NpgBRs7TjOFCbYWGOStHeM31U7dvA%20"
-  //   )
-  //     .then((Response) => Response.json())
-  //     .then((json) => {
-  //       const videos = json.items.map((item) => {
-  //         return { ...item };
-  //       });
-  //       setVideos({ videos });
-  //     });
-  // };
-
   return (
     <>
       <header>
         <nav>
           <h1 className="logo">
-            <img src={logo} alt="logo" />
+            <img src="/img/logo.png" alt="logo" />
           </h1>
           {/* <SearchBar getSearchData={this.getSearchData}></SearchBar> */}
           <div className="right-menu">
