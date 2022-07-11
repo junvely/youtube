@@ -1,25 +1,28 @@
-import React, { Component } from "react";
-import styles from "../css/searchBar.module.css";
+import React, { useRef } from "react";
+import styles from "../search-bar/searchBar.module.css";
 
-class SearchBar extends Component {
-  inputRef = React.createRef();
+const SearchBar = (props) => {
+  const inputRef = useRef();
 
-  onSubmitInputValue = (e) => {
+  const handleSubmitInput = (e) => {
     e.preventDefault();
-    const input = this.inputRef.current.value;
-    this.props.getSearchData(input);
+    const input = inputRef.current.value;
+    props.getSearchData(input);
   };
 
-  render() {
-    return (
-      <form className={styles.searchForm} onSubmit={this.onSubmitInputValue}>
-        <input ref={this.inputRef} type="text" className={styles.searchInput} />
-        <button type="submit" className={styles.searchButton}>
-          <i className="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-    );
-  }
-}
+  return (
+    <form className={styles.searchForm} onSubmit={handleSubmitInput}>
+      <input
+        ref={inputRef}
+        type="text"
+        className={styles.searchInput}
+        placeholder="Video Search"
+      />
+      <button type="submit" className={styles.searchButton}>
+        <i className="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+  );
+};
 
 export default SearchBar;

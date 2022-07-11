@@ -9,15 +9,14 @@ class Video extends Component {
 
   render() {
     const { video } = this.props;
-    const videoId = video.id.videoId ? video.id.videoId : video.id;
     return (
       <li
-        key={videoId}
+        key={video.id}
         className={styles.item}
         onClick={this.handleVideoSubmit}
       >
         <img
-          src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+          src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`}
           alt="thumbnails"
         />
         <div className={styles.titleCon}>

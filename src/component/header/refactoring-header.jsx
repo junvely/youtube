@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "../header/header.module.css";
 
-// import SearchBar from "./search-bar/refactoring-search-bar";
+import SearchBar from "./search-bar/refactoring-search-bar";
 
 const Header = (props) => {
   return (
     <header>
       <nav>
-        <h1 className={styles.logo}>
-          <img src="/img/logo.png" alt="logo" />
-        </h1>
-        {/* <SearchBar getSearchData={props.getSearchData}></SearchBar> */}
+        <div className={styles.logo}>
+          <img src="/img/youtube.png" alt="logo" />
+          <h1>YouTube</h1>
+        </div>
+        <SearchBar getSearchData={props.getSearchData}></SearchBar>
         <div className={styles.rightMenu}>
           <ul>
             <li>
