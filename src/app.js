@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./app.css";
 import Header from "./component/header/refactoring-header";
+import VideoDetails from "./component/video-details/refactoring-video-details";
 import VideoList from "./component/video-list/refactoring-video-list";
 
 const App = ({ youtube }) => {
@@ -183,6 +184,12 @@ const App = ({ youtube }) => {
     //   },
     // },
   ]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
+  const selectVideo = (video) => {
+    const videoData = { ...video };
+    setSelectedVideo(videoData);
+  };
 
   const search = (input) => {
     youtube
@@ -203,7 +210,8 @@ const App = ({ youtube }) => {
     <>
       <Header getSearchData={search}></Header>
       <section>
-        <VideoList videos={videos}></VideoList>
+        {selectedVideo && <VideoDetails video={selectedVideo}></VideoDetails>}
+        <VideoList videos={videos} onVideoClick={selectVideo}></VideoList>
       </section>
     </>
   );
