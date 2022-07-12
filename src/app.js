@@ -210,8 +210,18 @@ const App = ({ youtube }) => {
     <>
       <Header getSearchData={search}></Header>
       <section>
-        {selectedVideo && <VideoDetails video={selectedVideo}></VideoDetails>}
-        <VideoList videos={videos} onVideoClick={selectVideo}></VideoList>
+        {selectedVideo && (
+          <div className="videoDetails">
+            <VideoDetails video={selectedVideo}></VideoDetails>
+          </div>
+        )}
+        <div className="videoList">
+          <VideoList
+            videos={videos}
+            onVideoClick={selectVideo}
+            display={selectedVideo && "list"}
+          ></VideoList>
+        </div>
       </section>
     </>
   );

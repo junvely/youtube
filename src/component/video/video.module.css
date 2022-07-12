@@ -59,3 +59,21 @@
     width: 100%;
   }
 }
+
+.list {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.listImg {
+  width: 40%;
+}
+
+.listTitle {
+  width: 60%;
+}
+
+.listTitle img {
+  display: none;
+}

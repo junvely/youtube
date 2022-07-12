@@ -1,9 +1,5 @@
 @charset "utf-8";
 
-.videoDetailCon {
-  width: 80%;
-  /* background-color: pink; */
-}
 .iframeCon {
   position: relative;
   padding-bottom: 56.25%;
@@ -32,7 +28,7 @@
   padding: 0.1em 0;
 }
 .description {
-  height: 2rem;
+  height: 3rem;
   font-size: 0.9em;
   color: #666;
   margin: 0.5rem 0;
