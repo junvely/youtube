@@ -192,18 +192,15 @@ const App = ({ youtube }) => {
   };
 
   const search = (input) => {
-    youtube
-      .search(input)
-      .then((videos) => setVideos(videos))
-      .catch((error) => console.log("error", error));
+    youtube.search(input).then((videos) => {
+      setSelectedVideo(null);
+      setVideos(videos);
+    });
   };
 
   useEffect(() => {
     console.log("mount!");
-    youtube
-      .mostPopular()
-      .then((videos) => setVideos(videos))
-      .catch((error) => console.log("error", error));
+    youtube.mostPopular().then((videos) => setVideos(videos));
   }, []);
 
   return (
