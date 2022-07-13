@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./app.css";
 import Header from "./component/header/refactoring-header";
 import VideoDetails from "./component/video-details/refactoring-video-details";
@@ -191,21 +191,28 @@ const App = ({ youtube }) => {
     setSelectedVideo(videoData);
   };
 
-  const search = (input) => {
-    youtube.search(input).then((videos) => {
-      setSelectedVideo(null);
-      setVideos(videos);
-    });
-  };
+  const search = useCallback(
+    (input) => {
+      youtube
+        .search(input) //
+        .then((videos) => {
+          setSelectedVideo(null);
+          setVideos(videos);
+        });
+    },
+    [youtube]
+  );
 
   useEffect(() => {
     console.log("mount!");
-    youtube.mostPopular().then((videos) => setVideos(videos));
-  }, []);
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
+  }, [youtube]);
 
   return (
     <>
-      <Header getSearchData={search}></Header>
+      <Header onSearch={search}></Header>
       <section>
         {selectedVideo && (
           <div className="videoDetails">

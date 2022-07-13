@@ -1,23 +1,17 @@
 import React, { useRef } from "react";
-import styles from "../search-bar/searchBar.module.css";
+import styles from "./searchBar.module.css";
 
-const SearchBar = (props) => {
+const SearchBar = ({ onSearch }) => {
   const inputRef = useRef();
-
-  const handleSubmitInput = (e) => {
+  const onSubmitInputValue = (e) => {
     e.preventDefault();
     const input = inputRef.current.value;
-    props.getSearchData(input);
+    onSearch(input);
   };
 
   return (
-    <form className={styles.searchForm} onSubmit={handleSubmitInput}>
-      <input
-        ref={inputRef}
-        type="text"
-        className={styles.searchInput}
-        placeholder="Video Search"
-      />
+    <form className={styles.searchForm} onSubmit={onSubmitInputValue}>
+      <input ref={inputRef} type="text" className={styles.searchInput} />
       <button type="submit" className={styles.searchButton}>
         <i className="fa-solid fa-magnifying-glass"></i>
       </button>
