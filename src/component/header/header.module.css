@@ -42,3 +42,9 @@ nav {
   color: #222;
   cursor: pointer;
 }
+
+@media screen and (max-width: 960px) {
+  .rightMenu {
+    display: none;
+  }
+}
