@@ -34,12 +34,12 @@ nav {
   min-width: 150px;
   display: flex;
   justify-content: space-between;
+  color: #222;
 }
 
 .rightMenu ul > li {
   font-size: 1.3rem;
   line-height: 35px;
-  color: #222;
   cursor: pointer;
 }
 

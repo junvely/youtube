@@ -8,8 +8,8 @@
   width: 19.2%;
   height: auto;
   margin-bottom: 3em;
-  background-color: #d1d1d14b;
-  box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53);
+  /* background-color: #d1d1d14b; */
+  /* box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53); */
   border-radius: 5px;
   transition: transform 0.2s ease-in;
   cursor: pointer;
@@ -20,16 +20,17 @@
 }
 
 .titleCon {
-  padding: 3% 5%;
+  padding: 1.5% 0;
   display: flex;
 }
 
 .title {
-  height: 3rem;
-  line-height: 1.5rem;
+  height: 2.4rem;
+  line-height: 1.2rem;
+  letter-spacing: -0.05rem;
   font-size: 1rem;
-  font-weight: normal;
-  margin-bottom: 3%;
+  font-weight: 400;
+  margin-bottom: 1%;
   overflow: hidden;
 }
 
@@ -41,6 +42,7 @@
 
 .channelName {
   font-size: 0.9rem;
+  line-height: 0.9rem;
   color: #555;
 }
 
