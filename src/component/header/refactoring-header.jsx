@@ -3,7 +3,7 @@ import styles from "../header/header.module.css";
 import nightStyles from "../night-mode.module.css";
 import SearchBar from "./search-bar/refactoring-search-bar";
 
-const Header = memo(({ onSearch, onNightMode, nightMode }) => {
+const Header = memo(({ onSearch, onNightMode, nightMode, goHome }) => {
   const nightBg = nightMode && nightStyles.nightBg;
   const nightColor = nightMode && nightStyles.nightColor;
   const onNightToggle = (e) => {
@@ -17,14 +17,14 @@ const Header = memo(({ onSearch, onNightMode, nightMode }) => {
   return (
     <header className={nightBg}>
       <nav>
-        <div className={styles.logo}>
+        <div className={styles.logo} onClick={() => goHome()}>
           <img src="/img/youtube.png" alt="logo" />
           <h1 className={nightColor}>YouTube</h1>
         </div>
         <SearchBar onSearch={onSearch}></SearchBar>
         <div className={nightStyles.toggleCon}>
           {nightMode ? "🌙" : "☀️"}
-          <label htmlFor="toggle" className={nightStyles.toggle}>
+          <label htmlFor="toggle" className={nightStyles.label}>
             <input
               type="checkBox"
               id="toggle"

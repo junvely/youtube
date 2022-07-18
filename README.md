@@ -20,6 +20,8 @@
 - ~~가장 인기있는(mostPopular) 동영상 리스트 가져오기~~
 - ~~검색한(search) 동영상 리스트 가져오기~~
 - ~~동영상 상세페이지에서 정보(동영상 재생, 동영상 정보, 채널정보 등) 보여주기~~
+- ~~Youtube logo 클릭 시 동영상 리스트 초기화 후, 첫 화면(Most Popular)리스트 가져오기(7/18)~~
+- Night Mode toggle 버튼 생성 및 적용(7/18~)
 
 <br>
 
@@ -206,3 +208,5 @@ fetch(
 - useCallback, useEffect, Lifecycle 등에서 두번째 인자[](=전달한 인자 업데이트 시마다 실행)를 전달하지 않을 시, 계속해서 새로운 함수를 만든다(업데이트 될 때마다 생성). 무한루프에 빠질 가능성이 높다.
 
 - Axios 라이브러리 사용법 공부하기
+
+- checkbox의 스타일을 변경하고 싶을 경우, checkbox 대신 label과 연결하여 label을 스타일링하고 checkbox는 안보이게 설정한다. 또 클릭 시 스타일을 변경하고 싶을 경우 ::before과 같은 가상태그를 이용할 수 있다. (참고 : https://keichee.tistory.com/357)

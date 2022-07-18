@@ -18,6 +18,7 @@ nav {
 .logo {
   width: 200px;
   display: flex;
+  cursor: pointer;
 }
 .logo img {
   width: 40px;

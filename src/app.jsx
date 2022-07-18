@@ -203,12 +203,15 @@ const App = ({ youtube }) => {
     [youtube]
   );
 
-  useEffect(() => {
-    console.log("mount!");
+  const goHome = useCallback(() => {
     youtube
       .mostPopular() //
-      .then((videos) => setVideos(videos));
-  }, [youtube]);
+      .then((videos) => {
+        setSelectedVideo(null);
+        setVideos(null);
+        setVideos(videos);
+      });
+  }, []);
 
   const [nightMode, setNightMode] = useState(0);
   const handleOnNightMode = (toggle) => {
@@ -216,12 +219,19 @@ const App = ({ youtube }) => {
     console.log(nightMode);
   };
 
+  useEffect(() => {
+    youtube
+      .mostPopular() //
+      .then((videos) => setVideos(videos));
+  }, [youtube]);
+
   return (
     <div className="background">
       <Header
         onSearch={search}
         onNightMode={handleOnNightMode}
         nightMode={nightMode}
+        goHome={goHome}
       ></Header>
       <section>
         {selectedVideo && (
