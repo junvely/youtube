@@ -210,3 +210,5 @@ fetch(
 - Axios 라이브러리 사용법 공부하기
 
 - checkbox의 스타일을 변경하고 싶을 경우, checkbox 대신 label과 연결하여 label을 스타일링하고 checkbox는 안보이게 설정한다. 또 클릭 시 스타일을 변경하고 싶을 경우 ::before과 같은 가상태그를 이용할 수 있다. (참고 : https://keichee.tistory.com/357)
+
+- Night toggle에서 header컴포넌트에 boolean 전달 하여 className 사용 시, 조건부로(&&:논리연산자) 값을 생략하여 사용 하였더니 예상지 못한 경고(Warning)발생 : 삼항연산자(?)로 대체하여 수정하여 사라짐.

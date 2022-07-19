@@ -1,5 +1,4 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useRef } from "react";
 import "./app.css";
 import Header from "./component/header/refactoring-header";
 import VideoDetails from "./component/video-details/refactoring-video-details";
@@ -189,6 +188,8 @@ const App = ({ youtube }) => {
 
   const [searchVideo, setSearchVideo] = useState(null);
 
+  const [nightMode, setNightMode] = useState(0);
+
   const selectVideo = (video) => {
     setSelectedVideo(video);
   };
@@ -213,14 +214,12 @@ const App = ({ youtube }) => {
         setSelectedVideo(null);
         setVideos(null);
         setVideos(videos);
-        setSearchVideo(false);
+        setSearchVideo(null);
       });
   }, []);
 
-  const [nightMode, setNightMode] = useState(0);
   const handleOnNightMode = (toggle) => {
     setNightMode(toggle);
-    console.log(nightMode);
   };
 
   useEffect(() => {
@@ -230,7 +229,7 @@ const App = ({ youtube }) => {
   }, [youtube]);
 
   return (
-    <div className="background">
+    <>
       <Header
         onSearch={search}
         onNightMode={handleOnNightMode}
@@ -251,7 +250,7 @@ const App = ({ youtube }) => {
           ></VideoList>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

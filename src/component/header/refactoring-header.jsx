@@ -4,8 +4,8 @@ import nightStyles from "../night-mode.module.css";
 import SearchBar from "./search-bar/refactoring-search-bar";
 
 const Header = memo(({ onSearch, onNightMode, nightMode, goHome }) => {
-  const nightBg = nightMode && nightStyles.nightBg;
-  const nightColor = nightMode && nightStyles.nightColor;
+  const nightBg = nightMode ? nightStyles.nightBg : null;
+  const nightColor = nightMode ? nightStyles.nightColor : null;
   const onNightToggle = (e) => {
     if (e.target.checked) {
       onNightMode(true);

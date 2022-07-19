@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { memo, useRef } from "react";
 import styles from "./searchBar.module.css";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = memo(({ onSearch }) => {
   const inputRef = useRef();
   const onSubmitInputValue = (e) => {
     e.preventDefault();
@@ -17,6 +17,6 @@ const SearchBar = ({ onSearch }) => {
       </button>
     </form>
   );
-};
+});
 
 export default SearchBar;
