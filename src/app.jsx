@@ -187,6 +187,8 @@ const App = ({ youtube }) => {
   ]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
+  const [searchVideo, setSearchVideo] = useState(null);
+
   const selectVideo = (video) => {
     setSelectedVideo(video);
   };
@@ -198,6 +200,7 @@ const App = ({ youtube }) => {
         .then((videos) => {
           setSelectedVideo(null);
           setVideos(videos);
+          setSearchVideo(true);
         });
     },
     [youtube]
@@ -210,6 +213,7 @@ const App = ({ youtube }) => {
         setSelectedVideo(null);
         setVideos(null);
         setVideos(videos);
+        setSearchVideo(false);
       });
   }, []);
 
@@ -243,7 +247,7 @@ const App = ({ youtube }) => {
           <VideoList
             videos={videos}
             onVideoClick={selectVideo}
-            display={selectedVideo && "list"}
+            display={(selectedVideo || searchVideo) && "list"}
           ></VideoList>
         </div>
       </section>

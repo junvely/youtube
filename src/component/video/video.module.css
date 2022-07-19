@@ -8,8 +8,6 @@
   width: 19.2%;
   height: auto;
   margin-bottom: 3em;
-  /* background-color: #d1d1d14b; */
-  /* box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53); */
   border-radius: 5px;
   transition: transform 0.2s ease-in;
   cursor: pointer;
@@ -64,12 +62,16 @@
 
 .list {
   width: 100%;
+  max-width: 1000px;
+  margin: auto;
   display: flex;
   margin-bottom: 1em;
+  /* border: 1px solid; */
 }
 
 .listImg {
   width: 40%;
+  height: 100%;
 }
 
 .listTitle {

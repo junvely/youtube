@@ -37,6 +37,7 @@
   bottom: 0;
   background-color: orange;
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .slider::before {
