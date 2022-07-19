@@ -14,8 +14,10 @@ const Video = memo(({ video, onVideoClick, display }) => {
     >
       <img
         className={`${styles.thumbnails} ${displayListImg}`}
-        src={video.snippet.thumbnails.high.url}
+        src={video.snippet.thumbnails.medium.url}
         alt="thumbnails"
+        width="100%"
+        height="100%"
       />
       <div className={`${styles.titleCon} ${displayListTitle}`}>
         <img
