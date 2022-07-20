@@ -2,6 +2,18 @@
 
 #### ▶️Youtube : 유튜브 리액트 App(Youtube React-Application)
 
+## 🕹️ Stack 사용스택
+
+<div style="display:flex">
+  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/PostCSS-%dc3a09.svg?style=for-the-badge&logo=PostCSS&logoColor=white">
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB">
+  <img src="https://img.shields.io/badge/YouTubeAPIs-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white">
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white">
+</div>
+
+<br>
+
 #### 💻Desktop
 
 <img src="/public/img/desktop.jpg" alt="app-desktop">
